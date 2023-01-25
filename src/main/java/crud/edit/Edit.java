@@ -1,24 +1,28 @@
-package crud.create;
+package crud.edit;
 
 import java.sql.*;
 import java.util.Scanner;
 
-public class Create {
-    public static void Create() throws SQLException {
+public class Edit {
+    public static void Edit() throws SQLException {
     }
+    static String edit_country_name;
     static String country_name;
     static String option = "country";
 
 
 
-    public static boolean Créer_country() throws SQLException {
+    public static boolean Modifier_country() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
 
         try {
             Scanner console = new Scanner(System.in);
-            System.out.print("Entrer le nom du pays à créer: ");
+            System.out.print("Entrer le nom du pays à modifier: ");
+            edit_country_name = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
             country_name = console.nextLine();
 
             //Connexion à la db
@@ -27,13 +31,14 @@ public class Create {
             System.out.println("\u001B[36m/// Connexion établie!");
 
             //Requete d'insertion
-            String sql = "INSERT INTO "+option+" VALUES (NULL,?,CURRENT_TIMESTAMP)";
+            String sql = "UPDATE "+option+" SET country = ? WHERE country = ?";
 
             //Créer l'objet statement
             PreparedStatement prepare = conn.prepareStatement(sql);
 
             //Variable country_name
             prepare.setString(1, country_name);
+            prepare.setString(2, edit_country_name);
 
 
             prepare.executeUpdate();
@@ -41,11 +46,11 @@ public class Create {
 
             conn.close();
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
             System.out.println("\u001B[31m---Erreur, données invalides");
             System.exit(0);
         }
-        System.out.println("\u001B[32m+++ Pays crée");
+        System.out.println("\u001B[32m+++ Pays modifié");
         System.exit(0);
         return true;
 

@@ -22,7 +22,7 @@ public class Delete {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url, username, password);
-            System.out.println("Connexion établie!");
+            System.out.println("\u001B[36m/// Connexion établie!");
 
             //Requete d'insertion
             String sql = "DELETE INTO country WHERE country = ?";
@@ -40,11 +40,12 @@ public class Delete {
 
             conn.close();
         } catch (Exception e) {
-            System.out.println("Vous avez rentré une valeur incorrecte ou");
-            System.out.println("Ce pays est relié à une clef étrangère et, donc, pas supprimable");
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.out.println("\u001B[31mVous avez rentré une valeur incorrecte ou");
+            System.out.println("\u001B[31mCe pays est relié à une clef étrangère et, donc, pas supprimable");
             System.exit(0);
         }
-        System.out.println("Pays supprimé");
+        System.out.println("\u001B[32m+++ Pays supprimé");
         System.exit(0);
         return true;
 

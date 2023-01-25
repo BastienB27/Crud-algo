@@ -15,7 +15,7 @@ public class Data {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection conn = DriverManager.getConnection(url, username, password);
-                System.out.println("Connexion établie!");
+                System.out.println("/// Connexion établie!");
 
                 // Sélection des données de la table
                 Statement pstmt = conn.createStatement();

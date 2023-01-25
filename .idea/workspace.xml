@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d89b40-7267-4c7d-a9a6-7e804971907a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/create/Create.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/database/Connexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/delete/Delete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/show/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/show/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/crud/edit/Edit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/crud/create/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/create/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/crud/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/menu/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +99,7 @@
       <updated>1674638478171</updated>
       <workItem from="1674638479353" duration="2238000" />
       <workItem from="1674642070786" duration="6483000" />
-      <workItem from="1674652777066" duration="3209000" />
+      <workItem from="1674652777066" duration="6963000" />
     </task>
     <servers />
   </component>
@@ -126,16 +116,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/crud/delete/Delete.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

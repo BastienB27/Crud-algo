@@ -10,7 +10,6 @@ public class Connexion {
     }
 
     public static void connect() throws SQLException {
-        System.out.println("Hello world!");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
