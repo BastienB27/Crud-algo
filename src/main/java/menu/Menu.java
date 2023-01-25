@@ -12,21 +12,22 @@ import crud.*;
             int choice;
 
             do {
-                System.out.println("\n☰ Base de données Sakila\n");
+                System.out.println("\n\n\n\n\n\n☰ Base de données Sakila\n");
 
-                System.out.println("｜1.  Pays                       ｜");
-                System.out.println("｜2.  Villes                     ｜");
-                System.out.println("｜3.  Films                      ｜");
-                System.out.println("｜4.  Acteurs                    ｜");
-                System.out.println("｜5.  Clients                    ｜");
-                System.out.println("｜6.  Langues                    ｜");
-                System.out.println("｜7.  Adresses                   ｜");
-                System.out.println("｜8.  Inventaire                 ｜");
-                System.out.println("｜9.  Paiement                   ｜");
-                System.out.println("｜10. Staff                      ｜");
-                System.out.println("｜11. Store                      ｜");
+                System.out.println("╔════════════════════════════════════════════════════╗");
+                System.out.println("║  1. Pays                                           ║");
+                System.out.println("║  2. Villes                                         ║");
+                System.out.println("║  3. Films                                          ║");
+                System.out.println("║  4. Acteurs                                        ║");
+                System.out.println("║  5. Clients                                        ║");
+                System.out.println("║  6. Langues                                        ║");
+                System.out.println("║  7. Adresses                                       ║");
+                System.out.println("║  8. Inventaire                                     ║");
+                System.out.println("║  9. Paiement                                       ║");
+                System.out.println("║ 10. Staff                                          ║");
+                System.out.println("║ 11. Store                     12. Quitter le menu  ║");
+                System.out.println("╚════════════════════════════════════════════════════╝");
 
-                System.out.println("｜12. Quitter le menu            ｜");
                 choice = scanner.nextInt();
 
                 switch (choice) {
@@ -103,19 +104,15 @@ import crud.*;
 
                 switch (choice) {
                     case 1:
-                        System.out.println("Actions possibles dans : Pays");
 
                         break;
                     case 2:
-                        System.out.println("Actions possibles dans : Villes");
 
                         break;
                     case 3:
-                        System.out.println("Actions possibles dans : Capitales");
 
                         break;
                     case 4:
-                        System.out.println("Actions possibles dans : Capitales");
 
                         break;
                     case 5:
@@ -387,18 +384,174 @@ import crud.*;
         }
 
         public static void menuinventaire() {
+            Scanner scanner = new Scanner(System.in);
+            int choice;
 
+            do {
+                System.out.println("\n☰ Table Inventaire\n");
+
+                System.out.println("1. Ajouter une nouveeau inventaire");
+                System.out.println("2. Afficher la liste des inventaires");
+                System.out.println("3. Modifier un inventaire");
+                System.out.println("4. Supprimer un inventaire\n");
+                System.out.println("5. Revenir à la liste des tables");
+                System.out.println("6. Quitter le menu");
+                choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+                        menu();
+                        break;
+                    case 6:
+                        System.out.println("A la prochaine ☹");
+                        System.exit(0);
+                        break;
+
+                    default:
+                        System.out.println("Veuillez choisir un choix valide.");
+                }
+            }   while (choice != 0);
         }
+
 
         public static void menupaiement() {
+            Scanner scanner = new Scanner(System.in);
+            int choice;
 
+            do {
+                System.out.println("\n☰ Table Paiement\n");
+
+                System.out.println("1. Ajouter un nouveau paiement");
+                System.out.println("2. Afficher la liste des paiements");
+                System.out.println("3. Modifier un paiement");
+                System.out.println("4. Supprimer un paiement\n");
+                System.out.println("5. Revenir à la liste des tables");
+                System.out.println("6. Quitter le menu");
+                choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+                        menu();
+                        break;
+                    case 6:
+                        System.out.println("A la prochaine ☹");
+                        System.exit(0);
+                        break;
+
+                    default:
+                        System.out.println("Veuillez choisir un choix valide.");
+                }
+            }   while (choice != 0);
         }
 
+
         public static void menustaff() {
+            Scanner scanner = new Scanner(System.in);
+            int choice;
+
+            do {
+                System.out.println("\n☰ Table Staff\n");
+
+                System.out.println("1. Ajouter un nouveau staff");
+                System.out.println("2. Afficher la liste des staffs");
+                System.out.println("3. Modifier un staff");
+                System.out.println("4. Supprimer un staff\n");
+                System.out.println("5. Revenir à la liste des tables");
+                System.out.println("6. Quitter le menu");
+                choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+                        menu();
+                        break;
+                    case 6:
+                        System.out.println("A la prochaine ☹");
+                        System.exit(0);
+                        break;
+
+                    default:
+                        System.out.println("Veuillez choisir un choix valide.");
+                }
+            }   while (choice != 0);
 
         }
 
         public static void menustore() {
+            Scanner scanner = new Scanner(System.in);
+            int choice;
+
+            do {
+                System.out.println("\n☰ Table Store\n");
+
+                System.out.println("1. Ajouter un nouveau store");
+                System.out.println("2. Afficher la liste des stores");
+                System.out.println("3. Modifier un store");
+                System.out.println("4. Supprimer un store\n");
+                System.out.println("5. Revenir à la liste des tables");
+                System.out.println("6. Quitter le menu");
+                choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+                        menu();
+                        break;
+                    case 6:
+                        System.out.println("A la prochaine ☹");
+                        System.exit(0);
+                        break;
+
+                    default:
+                        System.out.println("Veuillez choisir un choix valide.");
+                }
+            }   while (choice != 0);
 
         }
 
