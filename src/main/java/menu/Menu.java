@@ -16,17 +16,18 @@ import crud.*;
 
                 System.out.println("╔════════════════════════════════════════════════════╗");
                 System.out.println("║  1. Pays                                           ║");
-                System.out.println("║  2. Villes                                         ║");
-                System.out.println("║  3. Films                                          ║");
-                System.out.println("║  4. Acteurs                                        ║");
-                System.out.println("║  5. Clients                                        ║");
-                System.out.println("║  6. Langues                                        ║");
+                System.out.println("║  2. Villes                   ─▀▀▌───────▐▀▀        ║");
+                System.out.println("║  3. Films                    ─▄▀░◌░░░░░░░▀▄        ║");
+                System.out.println("║  4. Acteurs                  ▐░░◌░▄▀██▄█░░░▌       ║");
+                System.out.println("║  5. Clients                  ▐░░░▀████▀▄░░░▌       ║");
+                System.out.println("║  6. Langues                  ═▀▄▄▄▄▄▄▄▄▄▄▄▀═       ║");
                 System.out.println("║  7. Adresses                                       ║");
                 System.out.println("║  8. Inventaire                                     ║");
                 System.out.println("║  9. Paiement                                       ║");
                 System.out.println("║ 10. Staff                                          ║");
                 System.out.println("║ 11. Store                     12. Quitter le menu  ║");
                 System.out.println("╚════════════════════════════════════════════════════╝");
+
 
                 choice = scanner.nextInt();
 
@@ -559,6 +560,20 @@ import crud.*;
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
