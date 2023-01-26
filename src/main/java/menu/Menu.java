@@ -16,11 +16,11 @@ import crud.*;
 
                 System.out.println("╔════════════════════════════════════════════════════╗");
                 System.out.println("║  1. Pays                                           ║");
-                System.out.println("║  2. Villes                                         ║");
-                System.out.println("║  3. Films                                          ║");
-                System.out.println("║  4. Acteurs                                        ║");
-                System.out.println("║  5. Clients                                        ║");
-                System.out.println("║  6. Langues                                        ║");
+                System.out.println("║  2. Villes                     ─▀▀▌───────▐▀▀      ║");
+                System.out.println("║  3. Films                      ─▄▀░◌░░░░░░░▀▄      ║");
+                System.out.println("║  4. Acteurs                    ▐░░◌░▄▀██▄█░░░▌     ║");
+                System.out.println("║  5. Clients                    ▐░░░▀████▀▄░░░▌     ║");
+                System.out.println("║  6. Langues                    ═▀▄▄▄▄▄▄▄▄▄▄▄▀═     ║");
                 System.out.println("║  7. Adresses                                       ║");
                 System.out.println("║  8. Inventaire                                     ║");
                 System.out.println("║  9. Paiement                                       ║");
