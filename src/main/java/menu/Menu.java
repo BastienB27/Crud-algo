@@ -1,11 +1,12 @@
 package menu;
 
+import java.sql.SQLException;
 import java.util.*;
 
 import crud.*;
 
 
-    public class Menu {
+public class Menu {
 
         public static void menu() {
             Scanner scanner = new Scanner(System.in);
@@ -171,7 +172,7 @@ import crud.*;
             }   while (choice != 0);
         }
 
-        public static void menuacteur() {
+        public static void menuacteur() throws SQLException {
             Scanner scanner = new Scanner(System.in);
             int choice;
 

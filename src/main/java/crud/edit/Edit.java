@@ -119,10 +119,10 @@ public class Edit {
 
         try {
             Scanner console = new Scanner(System.in);
-            System.out.print("Entrer le nom du pays à modifier: ");
+            System.out.print("Entrer le nom du film à modifier: ");
             edit_name = console.nextLine();
 
-            System.out.print("Que voulez vous modifier dans ville ?: ");
+            System.out.print("Que voulez vous modifier dans film ?: ");
             option2 = console.nextLine();
 
             System.out.print("Entrer la modification: ");
@@ -134,7 +134,7 @@ public class Edit {
             System.out.println("\u001B[36m/// Connexion établie!");
 
             //Requete d'insertion
-            String sql = "UPDATE "+option+" SET "+option2+" = ? WHERE title = ?";
+            String sql = "UPDATE " + option + " SET " + option2 + " = ? WHERE title = ?";
 
             //Créer l'objet statement
             PreparedStatement prepare = conn.prepareStatement(sql);
@@ -157,13 +157,10 @@ public class Edit {
         System.exit(0);
         return true;
 
-
     }
 
     /* -------------------------------------------------------------------------------// */
 
-    static String edit_acteur_name;
-    static String acteur_name;
     static String option1 = "acteur";
 
     public static boolean Modifier_acteur() throws SQLException {
@@ -171,13 +168,15 @@ public class Edit {
         String username = "root";
         String password = "";
 
+        option = "acteur";
+
         try {
             Scanner console = new Scanner(System.in);
-            System.out.print("Entrer le nom du pays à modifier: ");
-            edit_country_name = console.nextLine();
+            System.out.print("Entrer le nom de l'acteur à modifier: ");
+            edit_name = console.nextLine();
 
             System.out.print("Entrer la modification: ");
-            country_name = console.nextLine();
+            option2 = console.nextLine();
 
             //Connexion à la db
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -185,14 +184,14 @@ public class Edit {
             System.out.println("\u001B[36m/// Connexion établie!");
 
             //Requete d'insertion
-            String sql = "UPDATE "+option+" SET country = ? WHERE country = ?";
+            String sql = "UPDATE "+option+" SET option2 = ? WHERE first_name = ?";
 
             //Créer l'objet statement
             PreparedStatement prepare = conn.prepareStatement(sql);
 
             //Variable country_name
-            prepare.setString(1, country_name);
-            prepare.setString(2, edit_country_name);
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
 
 
             prepare.executeUpdate();
