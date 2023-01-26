@@ -135,6 +135,52 @@ public class Menu {
             }
         }   while (choice != 0);
     }
+
+    public static void menuville() throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\n☰ Table ville\n");
+
+            System.out.println("1. Ajouter une nouvelle ville");
+            System.out.println("2. Afficher la liste des villes");
+            System.out.println("3. Modifier une ville");
+            System.out.println("4. Supprimer une ville\n");
+            System.out.println("5. Revenir à la liste des tables");
+            System.out.println("6. Quitter le menu");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    Create.Créer_city();
+
+                    break;
+                case 2:
+                    Data.Data_table_city();
+
+                    break;
+                case 3:
+                    Edit.Modifier_city();
+
+                    break;
+                case 4:
+                    Delete.Supprimer_city();
+
+                    break;
+                case 5:
+                    menu();
+                    break;
+                case 6:
+                    System.out.println("A la prochaine ☹");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Veuillez choisir un choix valide.");
+            }
+        }   while (choice != 0);
+    }
     public static void menufilm() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -152,15 +198,19 @@ public class Menu {
 
             switch (choice) {
                 case 1:
+                    Create.Créer_film();
 
                     break;
                 case 2:
+                    Data.Data_table_film();
 
                     break;
                 case 3:
+                    Edit.Modifier_film();
 
                     break;
                 case 4:
+                    Delete.Supprimer_film();
 
                     break;
                 case 5:
@@ -348,47 +398,7 @@ public class Menu {
     }
 
 
-    public static void menuville() throws SQLException {
-        Scanner scanner = new Scanner(System.in);
-        int choice;
 
-        do {
-            System.out.println("\n☰ Table ville\n");
-
-            System.out.println("1. Ajouter une nouvelle ville");
-            System.out.println("2. Afficher la liste des villes");
-            System.out.println("3. Modifier une ville");
-            System.out.println("4. Supprimer une ville\n");
-            System.out.println("5. Revenir à la liste des tables");
-            System.out.println("6. Quitter le menu");
-            choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-
-                    break;
-                case 5:
-                    menu();
-                    break;
-                case 6:
-                    System.out.println("A la prochaine ☹");
-                    System.exit(0);
-                    break;
-
-                default:
-                    System.out.println("Veuillez choisir un choix valide.");
-            }
-        }   while (choice != 0);
-    }
 
     public static void menuinventaire() {
 
