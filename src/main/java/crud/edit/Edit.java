@@ -159,4 +159,203 @@ public class Edit {
 
 
     }
+    public static boolean Modifier_inventory() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "inventory";
+
+        try {
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le inventory_id à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Que voulez vous modifier dans inventory ?: ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET option2 = ? WHERE inventory = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable inventory_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ inventory modifié");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    public static boolean Modifier_payment() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "payment";
+
+        try {
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le payment_id à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Que voulez vous modifier dans payment ?: ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET option2 = ? WHERE payment = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable payment_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ payment modifié");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    public static boolean Modifier_staff() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "staff";
+
+        try {
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le staff_id à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Que voulez vous modifier dans staff ?: ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET option2 = ? WHERE staff = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable staff_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ staff modifié");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    public static boolean Modifier_store() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "store";
+
+        try {
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le store_id à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Que voulez vous modifier dans store ?: ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET option2 = ? WHERE store = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable store_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ store modifié");
+        System.exit(0);
+        return true;
+
+
+    }
 }
