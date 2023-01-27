@@ -535,7 +535,157 @@ public class Data {
             e.printStackTrace();
         }
     }
+    public static void Data_table_inventory() {
 
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+        String tableName = "inventory";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("/// Connexion établie!");
+
+            // Sélection des données de la table
+            Statement pstmt = conn.createStatement();
+            ResultSet res = pstmt.executeQuery("SELECT * FROM " + tableName);
+            ResultSetMetaData rsmd = res.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            while (res.next()) {
+                for (int i = 1; i <= columnsNumber; i++) {
+                    if (i > 1) System.out.print(",  ");
+                    String columnValue = res.getString(i);
+                    System.out.print(columnValue + " " + rsmd.getColumnName(i));
+                }
+                System.out.println("");
+            }
+            if (search == true) {
+                Recherche_table_country();
+            } else {
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.exit(0);
+
+
+    }
+
+    public static void Data_table_payment() {
+
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+        String tableName = "payment";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("/// Connexion établie!");
+
+            // Sélection des données de la table
+            Statement pstmt = conn.createStatement();
+            ResultSet res = pstmt.executeQuery("SELECT * FROM " + tableName);
+            ResultSetMetaData rsmd = res.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            while (res.next()) {
+                for (int i = 1; i <= columnsNumber; i++) {
+                    if (i > 1) System.out.print(",  ");
+                    String columnValue = res.getString(i);
+                    System.out.print(columnValue + " " + rsmd.getColumnName(i));
+                }
+                System.out.println("");
+            }
+            if (search == true) {
+                Recherche_table_country();
+            } else {
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.exit(0);
+
+
+    }
+
+    public static void Data_table_staff() {
+
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+        String tableName = "staff";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("/// Connexion établie!");
+
+            // Sélection des données de la table
+            Statement pstmt = conn.createStatement();
+            ResultSet res = pstmt.executeQuery("SELECT * FROM " + tableName);
+            ResultSetMetaData rsmd = res.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            while (res.next()) {
+                for (int i = 1; i <= columnsNumber; i++) {
+                    if (i > 1) System.out.print(",  ");
+                    String columnValue = res.getString(i);
+                    System.out.print(columnValue + " " + rsmd.getColumnName(i));
+                }
+                System.out.println("");
+            }
+            if (search == true) {
+                Recherche_table_country();
+            } else {
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.exit(0);
+
+
+    }
+
+    public static void Data_table_store() {
+
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+        String tableName = "store";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("/// Connexion établie!");
+
+            // Sélection des données de la table
+            Statement pstmt = conn.createStatement();
+            ResultSet res = pstmt.executeQuery("SELECT * FROM " + tableName);
+            ResultSetMetaData rsmd = res.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            while (res.next()) {
+                for (int i = 1; i <= columnsNumber; i++) {
+                    if (i > 1) System.out.print(",  ");
+                    String columnValue = res.getString(i);
+                    System.out.print(columnValue + " " + rsmd.getColumnName(i));
+                }
+                System.out.println("");
+            }
+            if (search == true) {
+                Recherche_table_country();
+            } else {
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.exit(0);
+
+
+    }
 
 
 }

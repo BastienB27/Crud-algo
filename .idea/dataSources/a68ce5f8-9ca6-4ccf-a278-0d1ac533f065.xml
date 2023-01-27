@@ -1361,7 +1361,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="368" parent="306" name="city_id">
-      <AutoIncrement>601</AutoIncrement>
+      <AutoIncrement>604</AutoIncrement>
       <DasType>smallint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1404,7 +1404,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="376" parent="307" name="country_id">
-      <AutoIncrement>111</AutoIncrement>
+      <AutoIncrement>118</AutoIncrement>
       <DasType>smallint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1432,7 +1432,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="381" parent="308" name="customer_id">
-      <AutoIncrement>600</AutoIncrement>
+      <AutoIncrement>602</AutoIncrement>
       <DasType>smallint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1519,7 +1519,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Turn>before-row</Turn>
     </trigger>
     <column id="398" parent="309" name="film_id">
-      <AutoIncrement>1001</AutoIncrement>
+      <AutoIncrement>1002</AutoIncrement>
       <DasType>smallint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1808,7 +1808,7 @@ film_id</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="453" parent="314" name="language_id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>8</AutoIncrement>
       <DasType>tinyint unsigned|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>

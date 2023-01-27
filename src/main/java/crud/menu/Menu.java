@@ -421,28 +421,28 @@ public class Menu {
         int choice;
 
         do {
-            System.out.println("\n☰ Table Inventaire\n");
+            System.out.println("\n☰ Table langue\n");
 
-            System.out.println("1. Ajouter une nouveeau inventaire");
-            System.out.println("2. Afficher la liste des inventaires");
-            System.out.println("3. Modifier un inventaire");
-            System.out.println("4. Supprimer un inventaire\n");
+            System.out.println("1. Ajouter un nouveau inventory");
+            System.out.println("2. Afficher la liste des inventory");
+            System.out.println("3. Modifier un inventory");
+            System.out.println("4. Supprimer un inventory\n");
             System.out.println("5. Revenir à la liste des tables");
             System.out.println("6. Quitter le menu");
             choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-
+                    Create.Créer_inventory();
                     break;
                 case 2:
-
+                    Data.Data_table_inventory();
                     break;
                 case 3:
-
+                    Edit.Modifier_inventory();
                     break;
                 case 4:
-
+                    Delete.Supprimer_inventory();
                     break;
                 case 5:
                     menu();
@@ -457,35 +457,34 @@ public class Menu {
             }
         }   while (choice != 0);
     }
-
 
     public static void menupaiement() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("\n☰ Table Paiement\n");
+            System.out.println("\n☰ Table langue\n");
 
-            System.out.println("1. Ajouter un nouveau paiement");
-            System.out.println("2. Afficher la liste des paiements");
-            System.out.println("3. Modifier un paiement");
-            System.out.println("4. Supprimer un paiement\n");
+            System.out.println("1. Ajouter un nouveau payment");
+            System.out.println("2. Afficher la liste des payment");
+            System.out.println("3. Modifier un payment");
+            System.out.println("4. Supprimer un payment\n");
             System.out.println("5. Revenir à la liste des tables");
             System.out.println("6. Quitter le menu");
             choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
-
+                    Create.Créer_payment();
                     break;
                 case 2:
-
+                    Data.Data_table_payment();
                     break;
                 case 3:
-
+                    Edit.Modifier_payment();
                     break;
                 case 4:
-
+                    Delete.Supprimer_payment();
                     break;
                 case 5:
                     menu();
@@ -500,6 +499,7 @@ public class Menu {
             }
         }   while (choice != 0);
     }
+
 
 
     public static void menustaff() throws SQLException {
@@ -507,10 +507,10 @@ public class Menu {
         int choice;
 
         do {
-            System.out.println("\n☰ Table Staff\n");
+            System.out.println("\n☰ Table langue\n");
 
             System.out.println("1. Ajouter un nouveau staff");
-            System.out.println("2. Afficher la liste des staffs");
+            System.out.println("2. Afficher la liste des staff");
             System.out.println("3. Modifier un staff");
             System.out.println("4. Supprimer un staff\n");
             System.out.println("5. Revenir à la liste des tables");
@@ -519,16 +519,16 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-
+                    Create.Créer_staff();
                     break;
                 case 2:
-
+                    Data.Data_table_staff();
                     break;
                 case 3:
-
+                    Edit.Modifier_staff();
                     break;
                 case 4:
-
+                    Delete.Supprimer_staff();
                     break;
                 case 5:
                     menu();
@@ -542,18 +542,18 @@ public class Menu {
                     System.out.println("Veuillez choisir un choix valide.");
             }
         }   while (choice != 0);
-
     }
+
 
     public static void menustore() throws SQLException {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("\n☰ Table Store\n");
+            System.out.println("\n☰ Table langue\n");
 
             System.out.println("1. Ajouter un nouveau store");
-            System.out.println("2. Afficher la liste des stores");
+            System.out.println("2. Afficher la liste des store");
             System.out.println("3. Modifier un store");
             System.out.println("4. Supprimer un store\n");
             System.out.println("5. Revenir à la liste des tables");
@@ -562,16 +562,16 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-
+                    Create.Créer_store();
                     break;
                 case 2:
-
+                    Data.Data_table_store();
                     break;
                 case 3:
-
+                    Edit.Modifier_store();
                     break;
                 case 4:
-
+                    Delete.Supprimer_store();
                     break;
                 case 5:
                     menu();
@@ -585,7 +585,6 @@ public class Menu {
                     System.out.println("Veuillez choisir un choix valide.");
             }
         }   while (choice != 0);
-
     }
 
 

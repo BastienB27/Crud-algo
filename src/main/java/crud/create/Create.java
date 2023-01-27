@@ -429,4 +429,273 @@ public class Create {
 
     // ************************************************************************************************************ //
     // ************************************************************************************************************ //
+
+    public static boolean Créer_payment() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "payment";
+
+
+
+        try {
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+
+
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le customer_id à inserer: ");
+            parametre1 = console.nextLine();
+
+
+            Scanner console2 = new Scanner(System.in);
+            System.out.print("Entrer le staff_id à inserer: ");
+            parametre2 = console2.nextLine();
+
+            Scanner console3 = new Scanner(System.in);
+            System.out.print("Entrer le rental_id à inserer:");
+            parametre3 = console3.nextLine();
+
+
+            Scanner console4 = new Scanner(System.in);
+            System.out.print("Entrer le montant a inserer: ");
+            parametre4 = console4.nextLine();
+
+
+
+            //Requete d'insertion
+            String sql = "INSERT INTO "+option+" VALUES (NULL,?,?,?,?,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+            prepare.setString(3, parametre3);
+            prepare.setString(4, parametre4);
+
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Pays crée");
+        System.exit(0);
+        return true;
+
+
+    }
+    public static boolean Créer_inventory() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "inventory";
+
+
+
+        try {
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+
+
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer l'id du film à inserer: ");
+            parametre1 = console.nextLine();
+
+
+            Scanner console2 = new Scanner(System.in);
+            System.out.print("Entrer l'id du magasin ou se trouve le film: ");
+            parametre2 = console2.nextLine();
+
+
+
+            //Requete d'insertion
+            String sql = "INSERT INTO "+option+" VALUES (NULL,?,?,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ inventaire crée");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    public static boolean Créer_staff() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "staff";
+
+
+
+        try {
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+
+
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le prenom a inserer: ");
+            parametre1 = console.nextLine();
+
+
+            Scanner console2 = new Scanner(System.in);
+            System.out.print("Entrer le nom de famille a inserer: ");
+            parametre2 = console2.nextLine();
+
+            Scanner console3 = new Scanner(System.in);
+            System.out.print("Entrer le adress_id: ");
+            parametre3 = console3.nextLine();
+
+
+            Scanner console4 = new Scanner(System.in);
+            System.out.print("Entrer la photo a ajoutée: ");
+            parametre4 = console4.nextLine();
+
+            Scanner console5 = new Scanner(System.in);
+            System.out.print("Entrer le store_id: ");
+            parametre5 = console5.nextLine();
+
+
+            Scanner console6 = new Scanner(System.in);
+            System.out.print("Entrer le parametre 'active': ");
+            parametre6 = console6.nextLine();
+
+            Scanner console7 = new Scanner(System.in);
+            System.out.print("Entrer le username: ");
+            parametre7 = console7.nextLine();
+
+
+            Scanner console8 = new Scanner(System.in);
+            System.out.print("Entrer le password: ");
+            parametre8 = console8.nextLine();
+
+
+
+            //Requete d'insertion
+            String sql = "INSERT INTO "+option+" VALUES (NULL,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+            prepare.setString(3, parametre3);
+            prepare.setString(4, parametre4);
+            prepare.setString(5, parametre5);
+            prepare.setString(6, parametre6);
+            prepare.setString(7, parametre7);
+            prepare.setString(8, parametre8);
+
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ staff crée");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    public static boolean Créer_store() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "store";
+
+
+
+        try {
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            option = "store";
+
+
+
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le manager_staff_id du magasin: ");
+            parametre1 = console.nextLine();
+
+
+            Scanner console2 = new Scanner(System.in);
+            System.out.print("Entrer le adress_id du magasin: ");
+            parametre2 = console2.nextLine();
+
+
+
+            //Requete d'insertion
+            String sql = "INSERT INTO "+option+" VALUES (NULL,?,?,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ store crée");
+        System.exit(0);
+        return true;
+
+
+    }
 }
