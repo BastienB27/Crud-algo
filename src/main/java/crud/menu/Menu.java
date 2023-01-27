@@ -248,12 +248,15 @@ public class Menu {
 
             switch (choice) {
                 case 1:
+                    Create.Créer_actor();
 
                     break;
                 case 2:
+                    Data.Data_table_actor();
 
                     break;
                 case 3:
+                    Edit.Modifier_actor();
 
                     break;
                 case 4:
@@ -294,9 +297,11 @@ public class Menu {
 
                     break;
                 case 2:
+                    Data.Data_table_customer();
 
                     break;
                 case 3:
+                    Edit.Modifier_client();
 
                     break;
                 case 4:
@@ -338,9 +343,11 @@ public class Menu {
 
                     break;
                 case 2:
+                    Data.Data_table_adress();
 
                     break;
                 case 3:
+                    Edit.Modifier_client();
 
                     break;
                 case 4:
@@ -382,9 +389,11 @@ public class Menu {
 
                     break;
                 case 2:
+                    Data.Data_table_language();
 
                     break;
                 case 3:
+                    Edit.Modifier_langue();
 
                     break;
                 case 4:

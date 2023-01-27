@@ -149,7 +149,7 @@ public class Edit {
 
             conn.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             System.out.println("\u001B[31m---Erreur, données invalides");
             System.exit(0);
         }
@@ -159,4 +159,224 @@ public class Edit {
 
 
     }
+
+    /* -------------------------------------------------------------------------------// */
+
+
+    public static boolean Modifier_actor() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "actor";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Que voulez vous modifier dans acteur ? ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer le nom de l'acteur à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET "+option2+" = ? WHERE "+option2+" = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Acteur modifié");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    /* -------------------------------------------------------------------------------// */
+
+
+    public static boolean Modifier_client() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "customer";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Que voulez vous modifier dans client ? ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer l'option du client à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET "+option2+" = ? WHERE "+option2+" = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Client modifié");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    /* -------------------------------------------------------------------------------// */
+
+    public static boolean Modifier_langue() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "language";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Que voulez vous modifier dans langage ? ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer le nom du langage à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET "+option2+" = ? WHERE "+option2+" = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Langage modifié");
+        System.exit(0);
+        return true;
+
+
+    }
+
+    /* -------------------------------------------------------------------------------// */
+
+    static String edit_adresse_name;
+    static String adresse_name;
+    static String option4 = "adresse";
+
+    public static boolean Modifier_adresse() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "address";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Que voulez vous modifier dans adresse ? ");
+            option2 = console.nextLine();
+
+            System.out.print("Entrer le nom de l'adresse à modifier: ");
+            edit_name = console.nextLine();
+
+            System.out.print("Entrer la modification: ");
+            name = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "UPDATE "+option+" SET "+option2+" = ? WHERE "+option2+" = ?";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, name);
+            prepare.setString(2, edit_name);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Adresse modifié");
+        System.exit(0);
+        return true;
+
+    }
+
 }
