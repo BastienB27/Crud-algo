@@ -201,7 +201,232 @@ public class Create {
 
 
         }
+    public static boolean Créer_actor() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "actor";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            Scanner console = new Scanner(System.in);
+            System.out.print("Entrer le prénom de l'acteur à créer: ");
+            parametre1 = console.nextLine();
+
+            System.out.print("Entrer le nom de l'acteur à créer: ");
+            parametre2 = console.nextLine();
+
+            String sql = "INSERT INTO "+option+" VALUES (NULL,?,?,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Acteur crée");
+        System.exit(0);
+        return true;
+
     }
 
+    public static boolean Créer_language() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "language";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Entrer le nom de la langue : ");
+            parametre1 = console.nextLine();
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "INSERT INTO " + option + " VALUES (NULL,?,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+
+            prepare.executeUpdate();
 
 
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Langue crée");
+        System.exit(0);
+        return true;
+
+    }
+
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
+
+    public static boolean Créer_adress() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "address";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Entrer l'adresse' : ");
+            parametre1 = console.nextLine();
+
+
+            System.out.print("Entrer le district : ");
+            parametre2 = console.nextLine();
+
+            System.out.print("Entrer l'id de la ville ");
+            parametre3 = console.nextLine();
+
+            System.out.print("Entrer le code postal : ");
+            parametre4 = console.nextLine();
+
+            System.out.print("Entrer le numéro de téléphone : ");
+            parametre5 = console.nextLine();
+
+            System.out.print("Entrer la localisation | 0x00000000010100000000000000000000000000000000000000 : ");
+            parametre6 = console.nextLine();
+
+
+
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "INSERT INTO " + option + " VALUES (NULL,?,NULL,?,?,?,?,?,CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+            prepare.setString(3, parametre3);
+            prepare.setString(4, parametre4);
+            prepare.setString(5, parametre5);
+            prepare.setString(6, parametre6);
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Langue crée");
+        System.exit(0);
+        return true;
+
+    }
+
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
+
+    public static boolean Créer_customer() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = "";
+
+        option = "customer";
+
+        try {
+            Scanner console = new Scanner(System.in);
+
+            System.out.print("Entrer l'id du magasin ");
+            parametre1 = console.nextLine();
+
+            System.out.print("Entrer le prénom du client : ");
+            parametre2 = console.nextLine();
+
+            System.out.print("Entrer le nom du client : ");
+            parametre3 = console.nextLine();
+
+            System.out.print("Entrer l'email du client : ");
+            parametre4 = console.nextLine();
+
+            System.out.print("Entrer l'id de l'adresse du client : ");
+            parametre5 = console.nextLine();
+
+            System.out.print("Entrer l'activité du client | 1 ou 0 : ");
+            parametre6 = console.nextLine();
+
+            System.out.print("Entrer la date de création : ");
+            parametre7 = console.nextLine();
+
+
+            //Connexion à la db
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(url, username, password);
+            System.out.println("\u001B[36m/// Connexion établie!");
+
+            //Requete d'insertion
+            String sql = "INSERT INTO " + option + " VALUES (NULL,?,?,?,?,?,?,?, CURRENT_TIMESTAMP)";
+
+            //Créer l'objet statement
+            PreparedStatement prepare = conn.prepareStatement(sql);
+
+            //Variable country_name
+            prepare.setString(1, parametre1);
+            prepare.setString(2, parametre2);
+            prepare.setString(3, parametre3);
+            prepare.setString(4, parametre4);
+            prepare.setString(5, parametre5);
+            prepare.setString(6, parametre6);
+            prepare.setString(7, parametre7);
+
+            prepare.executeUpdate();
+
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("\u001B[31m---Erreur, données invalides");
+            System.exit(0);
+        }
+        System.out.println("\u001B[32m+++ Langue crée");
+        System.exit(0);
+        return true;
+
+    }
+
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
+}
