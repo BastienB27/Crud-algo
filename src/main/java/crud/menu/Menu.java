@@ -1,5 +1,6 @@
 package crud.menu;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -11,8 +12,9 @@ import crud.show.Data;
 
 
 public class Menu {
-
-    public static void menu() throws SQLException {
+    private static Connection connection;
+    public static void menu(Connection connection) throws SQLException {
+        connection = connection;
         Scanner scanner = new Scanner(System.in);
         int choice;
 
@@ -110,7 +112,7 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    Create.Créer_country();
+                    Create.Créer_country(connection);
 
                     break;
                 case 2:
@@ -126,7 +128,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -172,7 +174,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -218,7 +220,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -263,7 +265,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -308,7 +310,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -354,7 +356,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -400,7 +402,7 @@ public class Menu {
 
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -445,7 +447,7 @@ public class Menu {
                     Delete.Supprimer_inventory();
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -487,7 +489,7 @@ public class Menu {
                     Delete.Supprimer_payment();
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -531,7 +533,7 @@ public class Menu {
                     Delete.Supprimer_staff();
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");
@@ -574,7 +576,7 @@ public class Menu {
                     Delete.Supprimer_store();
                     break;
                 case 5:
-                    menu();
+                    menu(connection);
                     break;
                 case 6:
                     System.out.println("A la prochaine ☹");

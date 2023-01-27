@@ -22,13 +22,12 @@ public class Create {
 
     static String option;
     static boolean liensboucle = false;
+    private static Connection connection;
 
 
+    public static boolean Créer_country(Connection conn) throws SQLException {
+        connection = conn;
 
-    public static boolean Créer_country() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/sakila";
-        String username = "root";
-        String password = "";
 
         option = "country";
 
@@ -39,14 +38,14 @@ public class Create {
 
             //Connexion à la db
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(url, username, password);
+            //Connection conn = DriverManager.getConnection(url, username, password);
             System.out.println("\u001B[36m/// Connexion établie!");
 
             //Requete d'insertion
             String sql = "INSERT INTO "+option+" VALUES (NULL,?,CURRENT_TIMESTAMP)";
 
             //Créer l'objet statement
-            PreparedStatement prepare = conn.prepareStatement(sql);
+            PreparedStatement prepare = connection.prepareStatement(sql);
 
             //Variable country_name
             prepare.setString(1, parametre1);
@@ -99,7 +98,7 @@ public class Create {
                 String sql = "INSERT INTO "+option+" VALUES (NULL,?,?,CURRENT_TIMESTAMP)";
 
                 //Créer l'objet statement
-                PreparedStatement prepare = conn.prepareStatement(sql);
+                PreparedStatement prepare = connection.prepareStatement(sql);
 
                 //Variable country_name
                 prepare.setString(1, parametre1);
