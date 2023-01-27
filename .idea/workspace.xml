@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d89b40-7267-4c7d-a9a6-7e804971907a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/script/Crud.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/crud/database/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/CrudAlgo-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/crud/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/crud/create/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/create/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/crud/database/Connexion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/crud/delete/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/delete/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/crud/edit/Edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/edit/Edit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/crud/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/crud/show/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crud/show/Data.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,32 +43,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/florianrichet/Desktop/01-Ecole/05-Java/Crud-algo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/florianrichet/Desktop/01-Ecole/05-Java/Crud-algo/script",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;hive&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "hive"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/script" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/script" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -114,6 +109,7 @@
       <workItem from="1674642070786" duration="6483000" />
       <workItem from="1674652777066" duration="34364000" />
       <workItem from="1674816963577" duration="474000" />
+      <workItem from="1674817451894" duration="2790000" />
     </task>
     <servers />
   </component>
