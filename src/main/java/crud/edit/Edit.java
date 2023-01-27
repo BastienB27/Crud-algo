@@ -11,6 +11,8 @@ public class Edit {
     static String option;
     static String option2;
 
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
 
     public static boolean Modifier_country() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
@@ -56,15 +58,17 @@ public class Edit {
         System.exit(0);
         return true;
 
-
     }
+
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
+
     public static boolean Modifier_city() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
 
         option = "city";
-
 
 
         try {
@@ -107,8 +111,10 @@ public class Edit {
         System.exit(0);
         return true;
 
-
     }
+
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
     public static boolean Modifier_film() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
@@ -159,9 +165,8 @@ public class Edit {
 
     }
 
-    /* -------------------------------------------------------------------------------// */
-
-    static String option1 = "acteur";
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
 
     public static boolean Modifier_acteur() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
@@ -184,7 +189,7 @@ public class Edit {
             System.out.println("\u001B[36m/// Connexion établie!");
 
             //Requete d'insertion
-            String sql = "UPDATE "+option+" SET option2 = ? WHERE first_name = ?";
+            String sql = "UPDATE "+option+" SET option2 = ? WHERE last_name = ?";
 
             //Créer l'objet statement
             PreparedStatement prepare = conn.prepareStatement(sql);
@@ -206,28 +211,25 @@ public class Edit {
         System.out.println("\u001B[32m+++ Pays modifié");
         System.exit(0);
         return true;
-
-
     }
 
-    /* -------------------------------------------------------------------------------// */
-
-    static String edit_client_name;
-    static String client_name;
-    static String option2 = "client";
-
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
     public static boolean Modifier_client() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/sakila";
         String username = "root";
         String password = "";
 
+        option = "client";
+
         try {
+
             Scanner console = new Scanner(System.in);
-            System.out.print("Entrer le nom du pays à modifier: ");
-            edit_country_name = console.nextLine();
+            System.out.print("Entrer le nom du client à modifier: ");
+            edit_name = console.nextLine();
 
             System.out.print("Entrer la modification: ");
-            country_name = console.nextLine();
+            country_nam = console.nextLine();
 
             //Connexion à la db
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -261,7 +263,9 @@ public class Edit {
 
     }
 
-    /* -------------------------------------------------------------------------------// */
+    // ************************************************************************************************************ //
+    // ************************************************************************************************************ //
+
     static String edit_langue_name;
     static String langue_name;
     static String option3 = "langue";
