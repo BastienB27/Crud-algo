@@ -3,7 +3,11 @@ package menu;
 import java.sql.SQLException;
 import java.util.*;
 
-import crud.*;
+import crud.Delete.*;
+import crud.create.Create;
+import crud.delete.Delete;
+import crud.edit.Edit;
+import crud.show.Data;
 
 
 public class Menu {
@@ -189,16 +193,16 @@ public class Menu {
 
                 switch (choice) {
                     case 1:
-
-                        break;
+                        Create.Créerr_actor();
+                    break;
                     case 2:
-
+                        Data.Recherche_table_actor();
                         break;
                     case 3:
-
+                        Edit.Modifier_acteur();
                         break;
                     case 4:
-
+                        Delete.Supprimer_acteur();
                         break;
                     case 5:
                         menu();
@@ -231,16 +235,16 @@ public class Menu {
 
                 switch (choice) {
                     case 1:
-
+                        Create.Créer_customer();
                         break;
                     case 2:
-
+                        Data.Recherche_table_customer();
                         break;
                     case 3:
-
+                        Edit.Modifier_client()
                         break;
                     case 4:
-
+                        Delete.Supprimer_client();
                         break;
                     case 5:
                         menu();
@@ -274,16 +278,16 @@ public class Menu {
 
                 switch (choice) {
                     case 1:
-
+                        Create.Créer_adress();
                         break;
                     case 2:
-
+                        Data.Recherche_table_adress();
                         break;
                     case 3:
-
+                        Edit.Modifier_adresse();
                         break;
                     case 4:
-
+                        Delete.Supprimer_adresse();
                         break;
                     case 5:
                         menu();
@@ -317,16 +321,16 @@ public class Menu {
 
                 switch (choice) {
                     case 1:
-
+                        Create.Créer_language();
                         break;
                     case 2:
-
+                        Data.Recherche_table_language();
                         break;
                     case 3:
-
+                        Edit.Modifier_langue();
                         break;
                     case 4:
-
+                        Delete.Supprimer_langue();
                         break;
                     case 5:
                         menu();
